@@ -14,4 +14,5 @@ I only know how to do this in Linux, and would love to port this for other opera
 
 ## Reference
 
+[Bluefruit LE Python Library](https://learn.adafruit.com/bluefruit-le-python-library/usage)
 [Manual USB camera settings in Linux](https://www.kurokesu.com/main/2016/01/16/manual-usb-camera-settings-in-linux/)
