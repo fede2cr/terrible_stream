@@ -12,9 +12,7 @@ line = None
 with serial.Serial('/dev/ttyACM0', 115200) as ser:
     while True:
         line = ser.readline()   # read a '\n' terminated line
-        print(line)
         if line == b'Button pressed.\r\n':
-            print("auto")
             cmd = "v4l2-ctl -d " + dev + " -c focus_auto=" + str(focus_auto)
             if focus_auto == 0:
                 focus_auto = 1
@@ -36,5 +34,4 @@ with serial.Serial('/dev/ttyACM0', 115200) as ser:
                 absolute_focus = 255
             cmd = "v4l2-ctl -d " + dev + " -c focus_absolute=" + str(absolute_focus)
         if cmd != None:
-            print(cmd)
             os.system(cmd)
